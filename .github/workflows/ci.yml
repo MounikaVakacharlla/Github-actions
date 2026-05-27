@@ -50,6 +50,19 @@ jobs:
       if: success()
       run: |
         echo "Pipeline completed successfully!"
+        - name: Success Notification
+      if: success()
+      run: |
+        echo "Pipeline completed successfully!"
+
+    - name: Failure Notification
+      if: failure()
+      run: |
+        echo "Pipeline failed!"
+
+    - name: Pipeline Status Notification
+      run: |
+        echo "CI/CD Pipeline executed successfully"
 
     - name: Failure Notification
       if: failure()
