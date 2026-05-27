@@ -51,9 +51,6 @@ jobs:
       run: |
         echo "Pipeline completed successfully!"
         - name: Success Notification
-      if: success()
-      run: |
-        echo "Pipeline completed successfully!"
 
     - name: Failure Notification
       if: failure()
