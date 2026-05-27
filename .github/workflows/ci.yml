@@ -36,6 +36,12 @@ jobs:
     - name: Build Application
       run: |
         python setup.py sdist
+        
+    - name: Upload Build Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: python-build
+        path: dist/
 
     - name: Deployment Simulation
       run: |
