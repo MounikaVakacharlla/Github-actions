@@ -55,3 +55,7 @@ jobs:
       if: failure()
       run: |
         echo "Pipeline failed!"
+
+    - name: Pipeline Status
+      run: |
+        echo "Pipeline execution completed"
